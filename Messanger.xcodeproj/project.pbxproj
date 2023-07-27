@@ -11,6 +11,8 @@
 		E946D53B2A7273E30051C69D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D53A2A7273E30051C69D /* ContentView.swift */; };
 		E946D53D2A7273E40051C69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946D53C2A7273E40051C69D /* Assets.xcassets */; };
 		E946D5402A7273E40051C69D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946D53F2A7273E40051C69D /* Preview Assets.xcassets */; };
+		E946D54F2A7275890051C69D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D54E2A7275890051C69D /* LoginView.swift */; };
+		E946D5512A7281120051C69D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5502A7281120051C69D /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E946D53A2A7273E30051C69D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E946D53C2A7273E40051C69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E946D53F2A7273E40051C69D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E946D54E2A7275890051C69D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E946D5502A7281120051C69D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,11 @@
 		E946D5372A7273E30051C69D /* Messanger */ = {
 			isa = PBXGroup;
 			children = (
-				E946D5382A7273E30051C69D /* MessangerApp.swift */,
-				E946D53A2A7273E30051C69D /* ContentView.swift */,
+				E946D54A2A7274D10051C69D /* App */,
+				E946D5492A7274CC0051C69D /* Extensions */,
+				E946D5482A7274C40051C69D /* Core */,
+				E946D5472A7274C00051C69D /* Model */,
+				E946D5462A7274BB0051C69D /* Service */,
 				E946D53C2A7273E40051C69D /* Assets.xcassets */,
 				E946D53E2A7273E40051C69D /* Preview Content */,
 			);
@@ -65,6 +72,69 @@
 				E946D53F2A7273E40051C69D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E946D5462A7274BB0051C69D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E946D5472A7274C00051C69D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E946D5482A7274C40051C69D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E946D54B2A7274FE0051C69D /* Authentication */,
+				E946D54C2A7275060051C69D /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E946D5492A7274CC0051C69D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E946D54A2A7274D10051C69D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E946D5382A7273E30051C69D /* MessangerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E946D54B2A7274FE0051C69D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E946D54D2A72751E0051C69D /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E946D54C2A7275060051C69D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E946D53A2A7273E30051C69D /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E946D54D2A72751E0051C69D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E946D54E2A7275890051C69D /* LoginView.swift */,
+				E946D5502A7281120051C69D /* RegisterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E946D54F2A7275890051C69D /* LoginView.swift in Sources */,
+				E946D5512A7281120051C69D /* RegisterView.swift in Sources */,
 				E946D53B2A7273E30051C69D /* ContentView.swift in Sources */,
 				E946D5392A7273E30051C69D /* MessangerApp.swift in Sources */,
 			);
