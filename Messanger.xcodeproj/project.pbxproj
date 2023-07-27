@@ -13,6 +13,9 @@
 		E946D5402A7273E40051C69D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946D53F2A7273E40051C69D /* Preview Assets.xcassets */; };
 		E946D54F2A7275890051C69D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D54E2A7275890051C69D /* LoginView.swift */; };
 		E946D5512A7281120051C69D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5502A7281120051C69D /* RegisterView.swift */; };
+		E946D5542A7283300051C69D /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5532A7283300051C69D /* InboxView.swift */; };
+		E946D5572A7284F40051C69D /* ActiveNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5562A7284F40051C69D /* ActiveNowView.swift */; };
+		E946D5592A72877B0051C69D /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5582A72877B0051C69D /* InboxRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		E946D53F2A7273E40051C69D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E946D54E2A7275890051C69D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E946D5502A7281120051C69D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		E946D5532A7283300051C69D /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		E946D5562A7284F40051C69D /* ActiveNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowView.swift; sourceTree = "<group>"; };
+		E946D5582A72877B0051C69D /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,9 @@
 		E946D5482A7274C40051C69D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E946D5552A7284DE0051C69D /* ActiveNow */,
 				E946D54B2A7274FE0051C69D /* Authentication */,
+				E946D5522A72830D0051C69D /* Inbox */,
 				E946D54C2A7275060051C69D /* Root */,
 			);
 			path = Core;
@@ -135,6 +143,23 @@
 				E946D5502A7281120051C69D /* RegisterView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E946D5522A72830D0051C69D /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				E946D5532A7283300051C69D /* InboxView.swift */,
+				E946D5582A72877B0051C69D /* InboxRowView.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		E946D5552A7284DE0051C69D /* ActiveNow */ = {
+			isa = PBXGroup;
+			children = (
+				E946D5562A7284F40051C69D /* ActiveNowView.swift */,
+			);
+			path = ActiveNow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E946D5592A72877B0051C69D /* InboxRowView.swift in Sources */,
 				E946D54F2A7275890051C69D /* LoginView.swift in Sources */,
 				E946D5512A7281120051C69D /* RegisterView.swift in Sources */,
+				E946D5542A7283300051C69D /* InboxView.swift in Sources */,
+				E946D5572A7284F40051C69D /* ActiveNowView.swift in Sources */,
 				E946D53B2A7273E30051C69D /* ContentView.swift in Sources */,
 				E946D5392A7273E30051C69D /* MessangerApp.swift in Sources */,
 			);
