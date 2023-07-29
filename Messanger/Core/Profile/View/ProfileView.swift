@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
+    @StateObject private var viewModel: ProfileViewModel
+    
+    init(viewModel: ProfileViewModel) {
+        self._viewModel = StateObject(wrappedValue: ProfileViewModel())
+    }
+    
     var body: some View {
         VStack{
             // Header
             VStack{
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .foregroundColor(Color(.systemGray))
+                PhotosPicker(selection: $viewModel.selectedItem) {
+                    if let profileImage = viewModel.profileImage{
+                        profileImage
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 80)
+                            .clipShape(Circle())
+                    }else{
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(Color(.systemGray4))
+                    }
+                }
                 
                 
                 Text("Bruce Wayne")
@@ -57,6 +74,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewModel: ProfileViewModel())
     }
 }
