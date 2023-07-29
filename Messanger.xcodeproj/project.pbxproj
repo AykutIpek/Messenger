@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93AA4202A751F7E0021587A /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA41F2A751F7E0021587A /* NewMessageView.swift */; };
 		E946D5392A7273E30051C69D /* MessangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5382A7273E30051C69D /* MessangerApp.swift */; };
 		E946D53B2A7273E30051C69D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D53A2A7273E30051C69D /* ContentView.swift */; };
 		E946D53D2A7273E40051C69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946D53C2A7273E40051C69D /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E93AA41F2A751F7E0021587A /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		E946D5352A7273E30051C69D /* Messanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E946D5382A7273E30051C69D /* MessangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerApp.swift; sourceTree = "<group>"; };
 		E946D53A2A7273E30051C69D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E93AA41D2A751E400021587A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E93AA41E2A751F5D0021587A /* NewMessage */ = {
+			isa = PBXGroup;
+			children = (
+				E93AA41F2A751F7E0021587A /* NewMessageView.swift */,
+			);
+			path = NewMessage;
+			sourceTree = "<group>";
+		};
 		E946D52C2A7273E30051C69D = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +114,11 @@
 		E946D5482A7274C40051C69D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E93AA41D2A751E400021587A /* Profile */,
 				E946D5552A7284DE0051C69D /* ActiveNow */,
 				E946D54B2A7274FE0051C69D /* Authentication */,
 				E946D5522A72830D0051C69D /* Inbox */,
+				E93AA41E2A751F5D0021587A /* NewMessage */,
 				E946D54C2A7275060051C69D /* Root */,
 			);
 			path = Core;
@@ -233,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E946D5592A72877B0051C69D /* InboxRowView.swift in Sources */,
+				E93AA4202A751F7E0021587A /* NewMessageView.swift in Sources */,
 				E946D54F2A7275890051C69D /* LoginView.swift in Sources */,
 				E946D5512A7281120051C69D /* RegisterView.swift in Sources */,
 				E946D5542A7283300051C69D /* InboxView.swift in Sources */,
