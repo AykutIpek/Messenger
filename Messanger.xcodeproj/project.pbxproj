@@ -11,6 +11,7 @@
 		E93AA4242A752C680021587A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4232A752C680021587A /* ProfileView.swift */; };
 		E93AA4262A752DE60021587A /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */; };
 		E93AA4282A75380E0021587A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4272A75380E0021587A /* ProfileViewModel.swift */; };
+		E93AA42A2A753C8A0021587A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4292A753C8A0021587A /* User.swift */; };
 		E946D5392A7273E30051C69D /* MessangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5382A7273E30051C69D /* MessangerApp.swift */; };
 		E946D53B2A7273E30051C69D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D53A2A7273E30051C69D /* ContentView.swift */; };
 		E946D53D2A7273E40051C69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946D53C2A7273E40051C69D /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		E93AA4232A752C680021587A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 		E93AA4272A75380E0021587A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E93AA4292A753C8A0021587A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E946D5352A7273E30051C69D /* Messanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E946D5382A7273E30051C69D /* MessangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerApp.swift; sourceTree = "<group>"; };
 		E946D53A2A7273E30051C69D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		E946D5472A7274C00051C69D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E93AA4292A753C8A0021587A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				E946D5542A7283300051C69D /* InboxView.swift in Sources */,
 				E946D5572A7284F40051C69D /* ActiveNowView.swift in Sources */,
 				E93AA4282A75380E0021587A /* ProfileViewModel.swift in Sources */,
+				E93AA42A2A753C8A0021587A /* User.swift in Sources */,
 				E946D53B2A7273E30051C69D /* ContentView.swift in Sources */,
 				E93AA4262A752DE60021587A /* SettingsOptionsViewModel.swift in Sources */,
 				E946D5392A7273E30051C69D /* MessangerApp.swift in Sources */,

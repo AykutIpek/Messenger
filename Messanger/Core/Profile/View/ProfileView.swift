@@ -9,12 +9,19 @@ import SwiftUI
 import PhotosUI
 
 struct ProfileView: View {
+    //MARK: - Propreties
     @StateObject private var viewModel: ProfileViewModel
+    private let user: User
     
-    init(viewModel: ProfileViewModel) {
+    
+    //MARK: - LifeCycle
+    init(user: User, viewModel: ProfileViewModel) {
+        self.user = user
         self._viewModel = StateObject(wrappedValue: ProfileViewModel())
     }
     
+    
+    //MARK: - Body
     var body: some View {
         VStack{
             // Header
@@ -27,15 +34,15 @@ struct ProfileView: View {
                             .frame(width: 80, height: 80)
                             .clipShape(Circle())
                     }else{
-                        Image(systemName: "person.circle.fill")
+                        Image(user.profileImageUrl ?? "")
                             .resizable()
+                            .scaledToFill()
                             .frame(width: 80, height: 80)
-                            .foregroundColor(Color(.systemGray4))
+                            .clipShape(Circle())
                     }
                 }
                 
-                
-                Text("Bruce Wayne")
+                Text(user.fullName)
                     .font(.title2)
                     .fontWeight(.semibold)
             }
@@ -72,8 +79,9 @@ struct ProfileView: View {
     }
 }
 
+//MARK: - Preview
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(viewModel: ProfileViewModel())
+        ProfileView(user: User.MOCK_USER, viewModel: ProfileViewModel())
     }
 }
