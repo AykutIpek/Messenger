@@ -12,6 +12,7 @@
 		E93AA4262A752DE60021587A /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */; };
 		E93AA4282A75380E0021587A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4272A75380E0021587A /* ProfileViewModel.swift */; };
 		E93AA42A2A753C8A0021587A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4292A753C8A0021587A /* User.swift */; };
+		E93AA42D2A7550410021587A /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA42C2A7550410021587A /* CircularProfileImageView.swift */; };
 		E946D5392A7273E30051C69D /* MessangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D5382A7273E30051C69D /* MessangerApp.swift */; };
 		E946D53B2A7273E30051C69D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D53A2A7273E30051C69D /* ContentView.swift */; };
 		E946D53D2A7273E40051C69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946D53C2A7273E40051C69D /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 		E93AA4272A75380E0021587A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E93AA4292A753C8A0021587A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E93AA42C2A7550410021587A /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		E946D5352A7273E30051C69D /* Messanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E946D5382A7273E30051C69D /* MessangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerApp.swift; sourceTree = "<group>"; };
 		E946D53A2A7273E30051C69D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 				E93AA4272A75380E0021587A /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E93AA42B2A7550000021587A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E93AA42C2A7550410021587A /* CircularProfileImageView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E946D52C2A7273E30051C69D = {
@@ -144,6 +154,7 @@
 			children = (
 				E946D5552A7284DE0051C69D /* ActiveNow */,
 				E946D54B2A7274FE0051C69D /* Authentication */,
+				E93AA42B2A7550000021587A /* Components */,
 				E946D5522A72830D0051C69D /* Inbox */,
 				E93AA41E2A751F5D0021587A /* NewMessage */,
 				E93AA41D2A751E400021587A /* Profile */,
@@ -284,6 +295,7 @@
 				E93AA4202A751F7E0021587A /* NewMessageView.swift in Sources */,
 				E946D54F2A7275890051C69D /* LoginView.swift in Sources */,
 				E946D5512A7281120051C69D /* RegisterView.swift in Sources */,
+				E93AA42D2A7550410021587A /* CircularProfileImageView.swift in Sources */,
 				E946D5542A7283300051C69D /* InboxView.swift in Sources */,
 				E946D5572A7284F40051C69D /* ActiveNowView.swift in Sources */,
 				E93AA4282A75380E0021587A /* ProfileViewModel.swift in Sources */,
