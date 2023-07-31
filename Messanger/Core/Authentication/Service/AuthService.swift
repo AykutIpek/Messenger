@@ -25,9 +25,8 @@ final class AuthService{
     
     //MARK: - LifeCycle
     init() {
-        Task{ try await UserService.shared.fetchCurrentUser() }
+        loadCurrentUserData()
         self.userSession = Auth.auth().currentUser
-//        print("DEBUG: User session id is \(userSession?.uid)")
     }
 }
 
@@ -38,6 +37,7 @@ extension AuthService: IAuthService{
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
+            loadCurrentUserData()
         } catch {
             print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
         }
@@ -49,6 +49,7 @@ extension AuthService: IAuthService{
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
             try await self.uploadUserData(email: email, fullName: fullName, id: result.user.uid)
+            loadCurrentUserData()
         } catch {
             print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
         }
@@ -58,6 +59,7 @@ extension AuthService: IAuthService{
         do {
             try Auth.auth().signOut() // Signs out is backend
             self.userSession = nil // update routing logic
+            UserService.shared.currentUser = nil
         } catch {
             print("DEBUG: Sign out error: \(error.localizedDescription)")
         }
@@ -67,6 +69,12 @@ extension AuthService: IAuthService{
         let user = User(fullName: fullName, email: email, profileImageUrl: nil)
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
+    }
+    
+    private func loadCurrentUserData(){
+        Task{
+            try await UserService.shared.fetchCurrentUser()
+        }
     }
     
 }
