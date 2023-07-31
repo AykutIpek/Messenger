@@ -19,6 +19,7 @@
 		E91F26FF2A77CF5300393E4D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F26FE2A77CF5300393E4D /* RegisterViewModel.swift */; };
 		E91F27012A77CF6C00393E4D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F27002A77CF6C00393E4D /* AuthService.swift */; };
 		E91F27052A77DCB200393E4D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F27042A77DCB200393E4D /* ContentViewModel.swift */; };
+		E91F27072A77F30500393E4D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F27062A77F30400393E4D /* UserService.swift */; };
 		E93AA4202A751F7E0021587A /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA41F2A751F7E0021587A /* NewMessageView.swift */; };
 		E93AA4242A752C680021587A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4232A752C680021587A /* ProfileView.swift */; };
 		E93AA4262A752DE60021587A /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */; };
@@ -45,6 +46,7 @@
 		E91F26FE2A77CF5300393E4D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E91F27002A77CF6C00393E4D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E91F27042A77DCB200393E4D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E91F27062A77F30400393E4D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E93AA41F2A751F7E0021587A /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		E93AA4232A752C680021587A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		E946D5462A7274BB0051C69D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E91F27062A77F30400393E4D /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				E93AA42D2A7550410021587A /* CircularProfileImageView.swift in Sources */,
 				E946D5542A7283300051C69D /* InboxView.swift in Sources */,
 				E91F26FD2A77CF1F00393E4D /* LoginViewModel.swift in Sources */,
+				E91F27072A77F30500393E4D /* UserService.swift in Sources */,
 				E946D5572A7284F40051C69D /* ActiveNowView.swift in Sources */,
 				E93AA4282A75380E0021587A /* ProfileViewModel.swift in Sources */,
 				E93AA42A2A753C8A0021587A /* User.swift in Sources */,
