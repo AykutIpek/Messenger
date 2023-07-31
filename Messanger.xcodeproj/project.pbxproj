@@ -15,6 +15,9 @@
 		E91F26F52A77CE0D00393E4D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E91F26F42A77CE0D00393E4D /* FirebaseFirestore */; };
 		E91F26F72A77CE0D00393E4D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E91F26F62A77CE0D00393E4D /* FirebaseFirestoreSwift */; };
 		E91F26F92A77CE0D00393E4D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E91F26F82A77CE0D00393E4D /* FirebaseStorage */; };
+		E91F26FD2A77CF1F00393E4D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F26FC2A77CF1F00393E4D /* LoginViewModel.swift */; };
+		E91F26FF2A77CF5300393E4D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F26FE2A77CF5300393E4D /* RegisterViewModel.swift */; };
+		E91F27012A77CF6C00393E4D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F27002A77CF6C00393E4D /* AuthService.swift */; };
 		E93AA4202A751F7E0021587A /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA41F2A751F7E0021587A /* NewMessageView.swift */; };
 		E93AA4242A752C680021587A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4232A752C680021587A /* ProfileView.swift */; };
 		E93AA4262A752DE60021587A /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */; };
@@ -37,6 +40,9 @@
 		E91F26EB2A77B97800393E4D /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		E91F26ED2A77C17900393E4D /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		E91F26EF2A77CD9C00393E4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E91F26FC2A77CF1F00393E4D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E91F26FE2A77CF5300393E4D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		E91F27002A77CF6C00393E4D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E93AA41F2A751F7E0021587A /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		E93AA4232A752C680021587A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E93AA4252A752DE60021587A /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
@@ -78,6 +84,23 @@
 				E91F26ED2A77C17900393E4D /* ChatBubble.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		E91F26FA2A77CEF600393E4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E91F26FC2A77CF1F00393E4D /* LoginViewModel.swift */,
+				E91F26FE2A77CF5300393E4D /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E91F26FB2A77CEFD00393E4D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E91F27002A77CF6C00393E4D /* AuthService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		E93AA41D2A751E400021587A /* Profile */ = {
@@ -209,6 +232,8 @@
 		E946D54B2A7274FE0051C69D /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E91F26FB2A77CEFD00393E4D /* Service */,
+				E91F26FA2A77CEF600393E4D /* ViewModel */,
 				E946D54D2A72751E0051C69D /* View */,
 			);
 			path = Authentication;
@@ -334,10 +359,13 @@
 				E946D54F2A7275890051C69D /* LoginView.swift in Sources */,
 				E91F26EA2A77B5C200393E4D /* ChatView.swift in Sources */,
 				E946D5512A7281120051C69D /* RegisterView.swift in Sources */,
+				E91F27012A77CF6C00393E4D /* AuthService.swift in Sources */,
 				E91F26EC2A77B97800393E4D /* ChatMessageCell.swift in Sources */,
+				E91F26FF2A77CF5300393E4D /* RegisterViewModel.swift in Sources */,
 				E91F26EE2A77C17900393E4D /* ChatBubble.swift in Sources */,
 				E93AA42D2A7550410021587A /* CircularProfileImageView.swift in Sources */,
 				E946D5542A7283300051C69D /* InboxView.swift in Sources */,
+				E91F26FD2A77CF1F00393E4D /* LoginViewModel.swift in Sources */,
 				E946D5572A7284F40051C69D /* ActiveNowView.swift in Sources */,
 				E93AA4282A75380E0021587A /* ProfileViewModel.swift in Sources */,
 				E93AA42A2A753C8A0021587A /* User.swift in Sources */,
