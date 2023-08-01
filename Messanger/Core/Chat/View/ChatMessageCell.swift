@@ -13,10 +13,12 @@ struct ChatMessageCell: View {
     private var isFromCurrentUser: Bool {
         return message.isFromCurrentUser
     }
+    
     var body: some View {
         HStack{
             if isFromCurrentUser {
                 Spacer()
+
                 Text(message.messageText)
                     .font(.subheadline)
                     .padding(12)
@@ -41,9 +43,3 @@ struct ChatMessageCell: View {
         .padding(.horizontal, 8)
     }
 }
-
-//struct ChatMessageCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChatMessageCell(isFromCurrentUser: false)
-//    }
-//}

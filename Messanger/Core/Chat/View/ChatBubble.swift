@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ChatBubble: Shape {
     let isFromCurrentUser: Bool
-    
-    
+
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [
             .topLeft,
