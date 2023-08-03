@@ -38,8 +38,8 @@ struct ChatView: View {
                 
                 ForEach(viewModel.messages) { message in
                     ChatMessageCell(message: message)
+           
                 }
-               
             }
             
             Spacer()

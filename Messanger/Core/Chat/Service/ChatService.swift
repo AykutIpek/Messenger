@@ -1,5 +1,5 @@
 //
-//  MessageService.swift
+//  ChatService.swift
 //  Messanger
 //
 //  Created by aykut ipek on 1.08.2023.
@@ -9,16 +9,16 @@ import Foundation
 import Firebase
 
 
-struct MessageService {
+struct ChatService {
     
-    static let messagesCollection = Firestore.firestore().collection("messages")
+    let chatPartner: User
     
-    static func sendMessage(_ messageText: String, toUser user: User){
+    func sendMessage(_ messageText: String){
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        let chatPartnerId = user.id
+        let chatPartnerId = chatPartner.id
         
-        let currentUserRef = messagesCollection.document(currentUid).collection(chatPartnerId).document()
-        let chatPartnerRef = messagesCollection.document(chatPartnerId).collection(currentUid)
+        let currentUserRef = FirestoreConstants.messageCollection.document(currentUid).collection(chatPartnerId).document()
+        let chatPartnerRef = FirestoreConstants.messageCollection.document(chatPartnerId).collection(currentUid)
         
         let messageId = currentUserRef.documentID
         
@@ -34,11 +34,15 @@ struct MessageService {
         chatPartnerRef.document(messageId).setData(messageData)
     }
     
-    static func observeMessages(chatPartner: User, completion: @escaping([Message]) -> Void){
+    func observeMessages(completion: @escaping([Message]) -> Void){
+
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         let chatPartnerId = chatPartner.id
         
-        let query = messagesCollection.document(currentUid).collection(chatPartnerId).order(by: "timestamp", descending: false)
+        let query = FirestoreConstants.messageCollection
+            .document(currentUid)
+            .collection(chatPartnerId)
+            .order(by: "timestamp", descending: false)
         
         query.addSnapshotListener { snapshot, _ in
             guard let changes = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
@@ -47,7 +51,6 @@ struct MessageService {
             for(index, message) in messages.enumerated() where !message.isFromCurrentUser {
                 messages[index].user = chatPartner
             }
-            
             completion(messages)
         }
     }
