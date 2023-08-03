@@ -12,6 +12,8 @@ struct InboxView: View {
     @StateObject var viewModel = InboxViewModel()
     @State private var selectedUser: User?
     @State private var showChat: Bool = false
+    
+    
     private var user: User?{
         return viewModel.currentUser
     }
@@ -22,8 +24,8 @@ struct InboxView: View {
                ActiveNowView()
                 
                 List{
-                    ForEach(0 ... 10, id: \.self) { message in
-                        InboxRowView()
+                    ForEach(viewModel.recentMessages) { message in
+                        InboxRowView(message: message)
                     }
                 }
                 .listStyle(PlainListStyle())
